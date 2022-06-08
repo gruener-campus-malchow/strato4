@@ -20,9 +20,9 @@ try:
     camera.annotate_background = Color('blue')
     camera.annotate_foreground = Color('yellow')
 
-    date_time = now.strftime("%Y-%m-%d_%H-%M-%S-%f")
+    date_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
     print('date: ' + date_time)
     camera.annotate_text = "DUMBCAM: " + date_time
-    camera.capture('/home/pi/shots/dumb_' + date_time + '.jpg')
+    camera.capture('/home/pi/dumb_' + date_time + '.jpg')
 finally:
     camera.close
