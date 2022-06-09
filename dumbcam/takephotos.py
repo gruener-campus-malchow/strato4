@@ -1,6 +1,8 @@
 from picamera import PiCamera, Color
 from time import sleep
 from datetime import datetime
+import socket
+
 
 # init camera
 camera = PiCamera()
@@ -9,10 +11,10 @@ try:
     # less resolution but full sensor 1640x1232
     # full resolution: 3280x2464
 
-    # off auto night nightpreview backlight spotlight sports snow beach verylong fixedfps antishake fireworks
+    # off auto night nightpreview backlight spotlight sports snow beach verylon>
     camera.exposure_mode = 'antishake'
 
-    # off auto sunlight cloudy shade tungsten fluorescent incandescent flash horizon
+    # off auto sunlight cloudy shade tungsten fluorescent incandescent flash ho>
     camera.awb_mode = 'horizon'
 
     # init subtitle
@@ -22,7 +24,11 @@ try:
 
     date_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
     print('date: ' + date_time)
-    camera.annotate_text = "DUMBCAM: " + date_time
-    camera.capture('/home/pi/dumb_' + date_time + '.jpg')
+    
+    # getting hostname for labeling the fotos
+    name = socket.gethostname()
+
+    camera.annotate_text = name + ": " + date_time
+    camera.capture('/home/pi/'+ name + '_' + date_time + '.jpg')
 finally:
     camera.close
