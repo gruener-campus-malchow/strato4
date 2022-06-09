@@ -18,4 +18,14 @@ network={
 
 4. connect PiCamera to cable and Pi
 5. connect RTC-module to GPIO-pins
-6. execute the [setup script](/shared/setup.sh)
+
+| DS1307 |	Pi GPIO |
+|---|---|
+| GND |	P1-06 |
+| Vcc	| P1-01 (3.3V) |
+| SDA	| P1-03 (I2C SDA) |
+| SCL	| P1-05 (I2C SCL) |
+
+![GPIO Layout for Pi zero](https://i.stack.imgur.com/yHddo.png)
+
+7. execute the [setup script](/shared/setup.sh)
