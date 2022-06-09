@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+<defs>
+<pattern id="Pattern" x="0" y="0" width=".5" height=".0588235294117647">
+    <circle cx="10" cy="5" r="5" style="fill:#808080"/>
+	<circle cx="25" cy="5" r="5" style="fill:#808080"/>
+</pattern>
+</defs>
+    <rect
+       style="fill:#008000"
+       width="128"
+       height="256"
+       x="16"
+       y="16" />
+    <rect
+       style="fill:#808080"
+       width="32"
+       height="32"
+       x="64"
+       y="16" />
+	<circle cx="115" cy="30" r="6" style="fill:#7f7704"/>
+	<text x="111" y="35" style="fill:#ffffff">1</text>
+	<circle cx="130" cy="30" r="6" style="fill:#d10a30"/>
+	<text x="126" y="35" style="fill:#ffffff">2</text>
+	<circle cx="115" cy="45" r="6" style="fill:#0ad1ab"/>
+	<text x="111" y="50" style="fill:#ffffff">3</text>
+	<circle cx="130" cy="45" r="6" style="fill:#d10a30"/>
+	<text x="126" y="50" style="fill:#ffffff">4</text>
+	<circle cx="115" cy="60" r="6" style="fill:#0ad1ab"/>
+	<text x="111" y="65" style="fill:#ffffff">5</text>
+	<circle cx="130" cy="60" r="6" style="fill:#808080"/>
+	<text x="126" y="65" style="fill:#ffffff">6</text>
+	
+	<rect fill="url(#Pattern)" stroke="none" width="30" height="170" x="105" y="69"/>
+</svg>

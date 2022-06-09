@@ -26,6 +26,6 @@ network={
 | SDA	| P1-03 (I2C SDA) |
 | SCL	| P1-05 (I2C SCL) |
 
-![GPIO Layout for Pi zero](https://i.stack.imgur.com/yHddo.png)
+![GPIO Layout for Pi zero](/doc/RPIGPIO.svg)
 
 7. execute the [setup script](/shared/setup.sh)
