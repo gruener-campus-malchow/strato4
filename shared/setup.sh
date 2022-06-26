@@ -41,6 +41,13 @@ echo "Installing crontab"
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
+if [ "$1" = "dumbcam" ]; then
+    echo "* * * * * /usr/bin/python3 /home/pi/strato4/$1/takephotos.py >> /home/pi/$1.log" >> mycron
+    #install new cron file
+    crontab mycron
+    rm mycron
+    exit
+fi
 echo "@reboot /usr/bin/python3 /home/pi/strato4/$1/frequency.py >> /home/pi/$1.log" >> mycron
 #install new cron file
 crontab mycron
