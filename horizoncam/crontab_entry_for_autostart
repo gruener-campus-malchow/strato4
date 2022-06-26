@@ -1,2 +1,0 @@
-# add this line in userspace 'crontab -e' without sudo
-@reboot /usr/bin/python3 /home/pi/strato4/horizoncam/frequency.py >> /home/pi/horizoncam.log
