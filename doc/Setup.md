@@ -62,8 +62,8 @@ enable hardware-clock
 ~~~
    7  sudo nano /boot/config.txt
    8  sudo reboot
-   9  sudo i2cdetect -y 1
-   10  sudo apt install i2cdetect
+   9  sudo apt install i2c-tools
+   10 sudo i2cdetect -y 1
    11  sudo apt-get -y remove fake-hwclock
    12  sudo update-rc.d -f fake-hwclock remove
    13  sudo systemctl disable fake-hwclock
