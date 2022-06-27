@@ -57,21 +57,23 @@ test camera, install upgrades
 
 enable hardware-clock
 
+![should look like](config-txt_HW-clock.png)
+
+~~~
+   7  sudo nano /boot/config.txt
+   8  sudo reboot
+   9  sudo i2cdetect -y 1
+   10  sudo apt install i2cdetect
+   11  sudo apt-get -y remove fake-hwclock
+   12  sudo update-rc.d -f fake-hwclock remove
+   13  sudo systemctl disable fake-hwclock
+   14  sudo nano /lib/udev/hwclock-set
+~~~
+
 ![should look like](uncomment_HW-clock.png)
 
 ~~~
-   12  sudo nano /boot/config.txt
-   13  sudo reboot
-   14  sudo i2cdetect -y 1
-   15  sudo apt install i2cdetect
-   16  sudo apt install i2c-tools
-   17  sudo i2cdetect -y 1
-   18  sudo raspi-config
-   19  sudo i2cdetect -y 1
-   20  sudo apt-get -y remove fake-hwclock
-   21  sudo update-rc.d -f fake-hwclock remove
-   22  sudo systemctl disable fake-hwclock
-   23  sudo nano /lib/udev/hwclock-set
-   24  sudo hwclock -r
-   25  history
+   15  sudo hwclock -r
 ~~~
+
+write an entry into crontab
