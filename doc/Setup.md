@@ -34,18 +34,30 @@ network={
 
 # history der horizoncam
 
+install necessary software
 ~~~
+    0 sudo apt update
     1 sudo apt install git python3-picamera
+~~~
+
+aktvivate camera-interface and i2c for RTC
+
+~~~
     2  sudo raspi-config
+~~~
+
+test camera, install upgrades
+
+~~~
     3  git clone https://github.com/gruener-campus-malchow/strato4.git
     4  python3 ./strato4/dumbcam/takephotos.py 
-    5  history
-    6  sudo apt update
-    7  sudo apt upgrade
-    8  reboot
-    9  ls
-   10  sudo reboot
-   11  sudo halt -p
+    5  sudo apt upgrade
+    6  reboot
+~~~
+
+enable hardware-clock
+
+~~~
    12  sudo nano /boot/config.txt
    13  sudo reboot
    14  sudo i2cdetect -y 1
