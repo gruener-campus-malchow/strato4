@@ -57,6 +57,8 @@ test camera, install upgrades
 
 enable hardware-clock
 
+![should look like](uncomment_HW-clock.png)
+
 ~~~
    12  sudo nano /boot/config.txt
    13  sudo reboot
